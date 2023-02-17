@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="index.css" />
+	</head>
+	<body>
+		<div class="container-register">
+			<img src="src/BG.png" class="Background-Register" alt="" />
+			<div class="Mittlerer-Register">
+				<img src="src/Menu.png" class="InnenRegister" alt="" />
+				<input
+					type="text"
+					class="VorName"
+					id="Inputt-Register1"
+					oninput="check1()"
+					placeholder="Vorname"
+				/>
+				<input
+					type="text"
+					class="NachName"
+					id="Inputt-Register2"
+					oninput="check2()"
+					placeholder="Nachname"
+				/>
+				<input
+					type="text"
+					class="Geburtstag"
+					id="Inputt-Register3"
+					oninput="check3()"
+					placeholder="Geburtstag (DD.MM.YYYY)"
+				/>
+				<input
+					type="text"
+					class="Größe"
+					id="Inputt-Register4"
+					oninput="check4()"
+					placeholder="Größe (cm)"
+				/>
+				<input
+					type="text"
+					class="Größe"
+					id="Inputt-Register5"
+					oninput="check5()"
+					placeholder="Geschlecht (M/W)"
+				/>
+				<img src="src/X.png" class="X1" alt="" />
+				<img src="src/X.png" class="X2" alt="" />
+				<img src="src/X.png" class="X3" alt="" />
+				<img src="src/X.png" class="X4" alt="" />
+				<img src="src/X.png" class="X5" alt="" />
+				<img src="src/Haken.png" class="Ok1" alt="" />
+				<img src="src/Haken.png" class="Ok2" alt="" />
+				<img src="src/Haken.png" class="Ok3" alt="" />
+				<img src="src/Haken.png" class="Ok4" alt="" />
+				<img src="src/Haken.png" class="Ok5" alt="" />
+				<button type="button" class="Button-SendForm"></button>
+			</div>
+		</div>
+	</body>
+	<script src="index.js"></script>
+	<script>
+		function check1() {
+			var inputt = document.getElementById("Inputt-Register1").value;
+			// Check for Length of String
+			if (onlyLetters(inputt)) {
+				if (inputt.length >= 3) {
+					valid1 = true;
+					$(".X1").hide();
+					$(".Ok1").show();
+				} else {
+					valid1 = false;
+					$(".X1").show();
+					$(".Ok1").hide();
+				}
+			}
+		}
+		function check2() {
+			var inputt = document.getElementById("Inputt-Register2").value;
+			// Check for Length of String
+			if (onlyLetters(inputt)) {
+				if (inputt.length >= 3) {
+					valid2 = true;
+					$(".X2").hide();
+					$(".Ok2").show();
+				} else {
+					valid2 = false;
+					$(".X2").show();
+					$(".Ok2").hide();
+				}
+			}
+		}
+		function check3() {
+			var inputt = document.getElementById("Inputt-Register3").value;
+			// Check for Length of String
+			if (onlyLetters(inputt)) {
+				if (ValidateDom(inputt)) {
+					valid3 = true;
+					$(".X3").hide();
+					$(".Ok3").show();
+				} else {
+					valid3 = false;
+					$(".X3").show();
+					$(".Ok3").hide();
+				}
+			}
+		}
+		function check4() {
+			var inputt = Number(
+				document.getElementById("Inputt-Register4").value
+			);
+			// Check for Length of String
+			if (onlyLetters(inputt)) {
+				if (inputt >= 120 && inputt <= 210) {
+					valid4 = true;
+					$(".X4").hide();
+					$(".Ok4").show();
+				} else {
+					valid4 = false;
+					$(".X4").show();
+					$(".Ok4").hide();
+				}
+			}
+		}
+		function check5() {
+			var inputt = document.getElementById("Inputt-Register5").value;
+			// Check for Length of String
+			if (onlyLetters(inputt)) {
+				if (inputt == "M" || inputt == "W") {
+					valid5 = true;
+					$(".X5").hide();
+					$(".Ok5").show();
+				} else {
+					valid5 = false;
+					$(".X5").show();
+					$(".Ok5").hide();
+				}
+			}
+		}
+		function onlyLetters(str) {
+			return /^[.a-zA-Z/ ",0-123456789_-ß]+$/.test(str);
+		}
+		function ValidateDom(input) {
+			var reg =
+				/(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d/;
+			if (input.match(reg)) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+
+		$(".Button-SendForm").click(function () {
+			var inputt1 = document.getElementById("Inputt-Register1").value;
+			var inputt2 = document.getElementById("Inputt-Register2").value;
+			var inputt3 = document.getElementById("Inputt-Register3").value;
+			var inputt4 = document.getElementById("Inputt-Register4").value;
+			var inputt5 = document.getElementById("Inputt-Register5").value;
+			$(".container-register").hide()
+			if (valid1 && valid2 && valid3 && valid4 && valid5)
+				$.post(
+					"https://Visuals_IV_Register/SendRegister",
+					JSON.stringify({
+						Vorname: inputt1,
+						Nachname: inputt2,
+						Geburtstag: inputt3,
+						Groesse: inputt4,
+						Geschlecht: inputt5,
+					})
+				);
+		});
+	</script>
+</html>

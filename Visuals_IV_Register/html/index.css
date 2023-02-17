@@ -1,0 +1,257 @@
+body {
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+}
+
+.Background-Register {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.InnenRegister {
+	position: absolute;
+	left: 28vw;
+	top: 5vh;
+	width: 47.3vw;
+}
+#Inputt-Register1 {
+	position: absolute;
+	width: 13.3vw;
+	height: 3.5vh;
+	left: 36.65vw;
+	top: 28.3vh;
+	color: white;
+	-webkit-appearance: none;
+	text-align: center;
+	background-color: rgba(255, 0, 0, 0);
+	z-index: 10;
+	outline: none;
+	border: none;
+	font-size: 1vw;
+	padding-top: 0.3vh;
+}
+#Inputt-Register1:hover {
+	transition: color 0.6 ease;
+}
+#Inputt-Register1:focus::placeholder {
+	color: transparent;
+	border: none;
+}
+#Inputt-Register1::placeholder {
+	color: white;
+	font-size: 0.9vw;
+	transition: color 0.3s ease;
+}
+#Inputt-Register2 {
+	position: absolute;
+	width: 13.3vw;
+	height: 3.5vh;
+	left: 36.65vw;
+	top: 38.8vh;
+	color: white;
+	-webkit-appearance: none;
+	text-align: center;
+	background-color: rgba(255, 0, 0, 0);
+	z-index: 10;
+	outline: none;
+	border: none;
+	font-size: 1vw;
+	padding-top: 0.3vh;
+}
+#Inputt-Register2:hover {
+	transition: color 0.6 ease;
+}
+#Inputt-Register2:focus::placeholder {
+	color: transparent;
+	border: none;
+}
+#Inputt-Register2::placeholder {
+	color: white;
+	font-size: 0.9vw;
+	transition: color 0.3s ease;
+}
+#Inputt-Register3 {
+	position: absolute;
+	width: 13.3vw;
+	height: 3.5vh;
+	left: 36.65vw;
+	top: 49.2vh;
+	color: white;
+	-webkit-appearance: none;
+	text-align: center;
+	background-color: rgba(255, 0, 0, 0);
+	z-index: 10;
+	outline: none;
+	border: none;
+	font-size: 1vw;
+	padding-top: 0.3vh;
+}
+#Inputt-Register3:hover {
+	transition: color 0.6 ease;
+}
+#Inputt-Register3:focus::placeholder {
+	color: transparent;
+	border: none;
+}
+#Inputt-Register3::placeholder {
+	color: white;
+	font-size: 0.9vw;
+	transition: color 0.3s ease;
+}
+#Inputt-Register4 {
+	position: absolute;
+	width: 13.3vw;
+	height: 3.5vh;
+	left: 36.65vw;
+	top: 59.7vh;
+	color: white;
+	-webkit-appearance: none;
+	text-align: center;
+	background-color: rgba(255, 0, 0, 0);
+	z-index: 10;
+	outline: none;
+	border: none;
+	font-size: 1vw;
+	padding-top: 0.3vh;
+}
+#Inputt-Register4:hover {
+	transition: color 0.6 ease;
+}
+#Inputt-Register4:focus::placeholder {
+	color: transparent;
+	border: none;
+}
+#Inputt-Register4::placeholder {
+	color: white;
+	font-size: 0.9vw;
+	transition: color 0.3s ease;
+}
+#Inputt-Register5 {
+	position: absolute;
+	width: 13.3vw;
+	height: 3.5vh;
+	left: 36.65vw;
+	top: 70vh;
+	color: white;
+	-webkit-appearance: none;
+	text-align: center;
+	background-color: rgba(255, 0, 0, 0);
+	z-index: 10;
+	outline: none;
+	border: none;
+	font-size: 1vw;
+	padding-top: 0.3vh;
+}
+#Inputt-Register5:hover {
+	transition: color 0.6 ease;
+}
+#Inputt-Register5:focus::placeholder {
+	color: transparent;
+	border: none;
+}
+#Inputt-Register5::placeholder {
+	color: white;
+	font-size: 0.9vw;
+	transition: color 0.3s ease;
+}
+.Button-SendForm {
+	position: absolute;
+	left: 39.5vw;
+	bottom: 17.3vh;
+	width: 9.4vw;
+	height: 4.4vh;
+	padding: 3px;
+	z-index: 29;
+	display: inline-block;
+	font-size: 1.3vw;
+	background-color: rgba(255, 0, 0, 0);
+	outline: none;
+	cursor: pointer;
+	font-family: "Khula";
+	font-style: normal;
+	font-weight: 300;
+	font-size: 1.2vw;
+	padding-top: 0.9vh;
+	cursor: pointer;
+	color: #ffffff;
+	border: none;
+	border-radius: 0.9vw;
+	outline: none;
+	z-index: 29;
+}
+.X1 {
+	position: absolute;
+	width: 1.7vw;
+	left: 51vw;
+	z-index: 1;
+	top: 29vh;
+}
+.X2 {
+	position: absolute;
+	width: 1.7vw;
+	left: 51vw;
+	z-index: 1;
+	top: 39.4vh;
+}
+.X3 {
+	position: absolute;
+	width: 1.7vw;
+	left: 51vw;
+	z-index: 1;
+	top: 49.9vh;
+}
+.X4 {
+	position: absolute;
+	width: 1.7vw;
+	left: 51vw;
+	z-index: 1;
+	top: 60.2vh;
+}
+.X5 {
+	position: absolute;
+	width: 1.7vw;
+	left: 51vw;
+	z-index: 1;
+	top: 70.7vh;
+}
+.Ok1 {
+	position: absolute;
+	display: none;
+	width: 1.7vw;
+	left: 51vw;
+	z-index: 1;
+	top: 29.4vh;
+}
+.Ok2 {
+	position: absolute;
+	width: 1.7vw;
+	left: 51vw;
+	display: none;
+	z-index: 1;
+	top: 39.8vh;
+}
+.Ok3 {
+	position: absolute;
+	width: 1.7vw;
+	left: 51vw;
+	display: none;
+	z-index: 1;
+	top: 50.3vh;
+}
+.Ok4 {
+	position: absolute;
+	width: 1.7vw;
+	left: 51vw;
+	display: none;
+	z-index: 1;
+	top: 60.6vh;
+}
+.Ok5 {
+	position: absolute;
+	width: 1.7vw;
+	left: 51vw;
+	display: none;
+	z-index: 1;
+	top: 71vh;
+}
