@@ -14,5 +14,4 @@ No Socials Available
 
 ## Official Design
 
-![VisualsRegister](https://media.discordapp.net/attachments/880166106273296475/1117142688324657292/Screenshot_522.png?width=1123&height=632)
-![VisualsXMenu](https://cdn.discordapp.com/attachments/880166106273296475/1117142266675470436/Preview2.png)
+![VisualsRegister](https://i.ibb.co/LYXqK0Q/Screenshot-393.png)
